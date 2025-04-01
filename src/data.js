@@ -20,3 +20,4 @@ const categoryCounts = data.reduce((acc, product) => {
   ).map(([name, count]) => ({ name, count }));
   
 //   console.log(categoryNameCounts);
+export { data, categoryCounts };
