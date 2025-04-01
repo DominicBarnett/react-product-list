@@ -1,7 +1,7 @@
-import data from './data.json' assert { type: "json" };
+import data from './data.json';
 export default data;
 
-const categories = [...new Set(data.map(product => product.category))];
+const uniqueCategories = [...new Set(data.map(product => product.category))];
 // const uniqueCategories = [...new Set(categories)]
 // console.log(categories); 
 
@@ -20,4 +20,4 @@ const categoryCounts = data.reduce((acc, product) => {
   ).map(([name, count]) => ({ name, count }));
   
 //   console.log(categoryNameCounts);
-export { data, categoryCounts };
+export { data, uniqueCategories };
